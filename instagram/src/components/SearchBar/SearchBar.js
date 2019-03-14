@@ -23,11 +23,6 @@ const SearchBar = (props) => {
         <img src = {person} alt = "person" />
       </div>
 
-
-
-
-
-
     </div>
 
 
