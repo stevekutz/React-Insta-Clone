@@ -13,6 +13,7 @@ BenchNine|Hind|Karla|Lato|Lobster+Two|Oxygen|Pacifico|Roboto
   width: 880px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
