@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 
 import './postcontainer.css';
+import PostContainer from "./PostContainer";
 
 
 const PostContainerHeader = (props) => {
@@ -31,14 +32,12 @@ const PostContainerHeader = (props) => {
     </div>
 
 
-
   )
-
-
-
-
-
-
 };
+
+PostContainerHeader.propTypes = {
+  likes: PropTypes.number
+};
+
 
 export default PostContainerHeader;

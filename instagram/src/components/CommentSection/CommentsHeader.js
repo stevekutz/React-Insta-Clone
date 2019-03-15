@@ -7,7 +7,7 @@ import chat from '../img/Bubble_chat.png';
 import './commentsection.css';
 
 const CommentsHeader = (props) => {
-  console.log('Comments Header props  ', props);
+  console.log('CommentsHeader props  ', props);
 
   return(
     <div className = "commentsHeader-container">
@@ -15,7 +15,7 @@ const CommentsHeader = (props) => {
         <img src = {heart} alt = "heartIMG"/>
         <img src = {chat} alt = "Bubble_chat"/>
       </div>
-      <h3 className = "commentsHeaderLikes"> ###### likes </h3>
+      <h3 className = "commentsHeaderLikes"> {props.likes} likes </h3>
 
 
 

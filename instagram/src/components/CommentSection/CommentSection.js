@@ -13,7 +13,7 @@ class CommentSection extends React.Component {
     this.state = {
       comments: [],
       newComment: '',
-      count: 0,
+      likes: 0,
 
 
 
@@ -25,7 +25,10 @@ class CommentSection extends React.Component {
 
   componentDidMount () {
     console.log('*** CommentSection ComponentDidMount called');
-    this.setState({comments: this.props.dataItem.comments})
+    this.setState({
+      comments: this.props.dataItem.comments,
+      likes: this.props.dataItem.likes
+    })
 
   }
 
@@ -35,7 +38,7 @@ class CommentSection extends React.Component {
     return(
       <div className = "commentsSection-container">
         <CommentsHeader
-          props = {this.state.comments}
+          likes = {this.state.likes}
         />
 
 

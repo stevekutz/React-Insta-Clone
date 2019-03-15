@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import './postcontainer.css';
 
 const PostContainer = (props) => {
-  console.log('Postcontainer props ', props);
+ // console.log('Postcontainer props ', props);
 
   return (
     <div className = "postcontainerALL">

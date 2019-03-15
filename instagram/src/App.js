@@ -29,7 +29,7 @@ class App extends Component {
 
   render() {
     console.log('**** render called');
-    console.log('dumdata is ', this.state.dumdata);
+  //  console.log('dumdata is ', this.state.dumdata);
 
 
     return (
