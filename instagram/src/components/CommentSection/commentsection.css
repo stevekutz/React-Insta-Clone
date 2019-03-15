@@ -2,16 +2,12 @@
   border: 1px solid darkorange;
   width: 100%;
   display: flex;
-
-
-
-
-
+  
 }
 
 
 .commentsHeader-container{
-  border: 5px solid palevioletred;
+  border: 2px solid palevioletred;
   width: 30%;
   padding: .5rem;
 
