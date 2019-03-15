@@ -1,5 +1,11 @@
+.postcontainerALL {
+  border: 5px solid red;
+  width: 100%;
+}
+
+
 .postcontainer {
-  border: 1px solid green;
+  border: 4px solid green;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,7 +49,7 @@
 
 .postImage {
   border: 5px solid blueviolet;
-  max-width: 100%;
+  width: 100%;
 
 
 }

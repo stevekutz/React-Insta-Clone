@@ -5,26 +5,29 @@ import PropTypes from 'prop-types';
 import './postcontainer.css';
 
 
-const PostContainerHeader = (dataItem) => {
-  console.log('PostContainerheader props  ' , dataItem);
+const PostContainerHeader = (props) => {
+  console.log('PostContainerheader props  ' , props.dataItem);
 
   return (
 
-    <div className = "postcontainer"
-         key = {dataItem.dataItem.username}
-    >
-      <div className = "postcontainer-header"
-      >
-
+    <div className = "postcontainer"  key = {props.dataItem.username}>
+      <div
+        key = {props.dataItem.username}
+        className = "postcontainer-header">
         <img
           className = "headerIMG"
-          src = {dataItem.thumbnailUrl}
+          src = {props.dataItem.thumbnailUrl}
           alt = "imageURL"/>
-        <h3 className = "userName"> {dataItem.username}</h3>
+        <h3 className = "userName"> {props.dataItem.username}</h3>
       </div>
 
-
-
+      <div className = "postImage">
+        <img
+          className = "bodyIMG"
+          src = {props.dataItem.imageUrl}
+          alt = "imageURL"
+        />
+      </div>
     </div>
 
 
