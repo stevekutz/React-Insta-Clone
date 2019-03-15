@@ -17,6 +17,14 @@
   padding: .25rem;
 }
 
+.searchInput{
+  border: 1px solid palevioletred;
+  width: 30%;
+  line-height: 2.25rem;
+  font-size: 2rem;
+  font-style: italic;
+  font-family: Lato;
+}
 
 img {
   width: 30px;

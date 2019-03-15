@@ -17,6 +17,14 @@ const SearchBar = (props) => {
         <img src = {vertical_LINE} alt = "v_line"/>
         <h1 className = 'logo'> Instagram </h1>
       </div>
+
+      <input
+        type = "text"
+        placeholder= " search here..."
+        className = "searchInput"
+
+      />
+
       <div className= "right-content">
         <img src = {compass} alt = "compass"/>
         <img src = {heart} alt = "heart"/>
