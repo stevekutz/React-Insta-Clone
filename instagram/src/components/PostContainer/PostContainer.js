@@ -15,12 +15,20 @@ const PostContainer = (props) => {
       {props.data.map(dataItem => {
 
         return (
-          <PostContainerHeader
-            key = {dataItem.username}
-            dataItem = {dataItem}
-          />
+          <div key = {dataItem.timestamp}>
 
-          
+            <PostContainerHeader
+
+              dataItem = {dataItem}
+            />
+
+            <CommentSection
+
+              dataItem = {dataItem}
+
+            />
+
+          </div>
 
         )
 

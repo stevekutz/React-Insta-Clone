@@ -1,0 +1,31 @@
+.commentsSection-container{
+  border: 1px solid darkorange;
+  width: 100%;
+  display: flex;
+
+
+
+
+
+}
+
+
+.commentsHeader-container {
+  border: 1px solid palevioletred;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+
+
+}
+
+.commentsHeaderLikes {
+  border: 1px solid cornflowerblue;
+  width: 100%;
+  display: flex;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+}

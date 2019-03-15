@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount () {
-    console.log('*** ComponentDidMount called');
+    console.log('*** App ComponentDidMount called');
     this.setState({dumdata: dummyData})
 
   }
