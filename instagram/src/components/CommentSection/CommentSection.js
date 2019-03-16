@@ -44,7 +44,7 @@ class CommentSection extends React.Component {
 
   updateHandler = event => {
     console.log(
-      '******** target name & value in updated handler',
+      '##### target name & value in updated handler',
       event.target.name,
       event.target.value
     );
@@ -58,13 +58,14 @@ class CommentSection extends React.Component {
     console.log('++++   handleSubmit says ', event);
 
     event.preventDefault();
-    this.newCommentHandler();
+    this.addNewComment();
   };
 
 
-  newCommentHandler = () =>  {
+  addNewComment = () =>  {
     let newComment = {
-      comment: this.state.newComment,
+      username: "nnnn",
+      text: this.state.newComment,
       id: Date.now(),
     };
 
@@ -76,6 +77,9 @@ class CommentSection extends React.Component {
     })
 
   };
+
+
+
 
 
   likeIncrementHandler = () => {
@@ -124,19 +128,18 @@ class CommentSection extends React.Component {
         }
 
         <form onSubmit = {this.handleSubmit}>
-          <input
-            className = "addComment"
-            placeholder = "add a Comment"
-            type = "text"
-            name = 'newComment'
-            value = {this.state.newComment}
-            onChange = {this.updateHandler}
+          <label> COMMENT:
+            <input
+              className = "addComment"
+              placeholder = "add a Comment"
+              type = "text"
+              name = 'newComment'
+              value = {this.state.value}
+              onChange = {this.updateHandler}
 
-          />
-          <button
-            type = "submit"
-            onClick = {this.newCommentHandler}
-          > Submit </button>
+            />
+          </label>
+
 
         </form>
 

@@ -63,6 +63,7 @@ class App extends Component {
 
   };
 
+  /*
   likeIncrementHandler = () => {
     console.log('>>>>>>>>>>>>> like handler fired !!!! ');
 
@@ -71,6 +72,8 @@ class App extends Component {
     })
 
   };
+  */
+
 
   render() {
   //  console.log('**** render called');
@@ -84,7 +87,8 @@ class App extends Component {
             updateHandler = {this.updateHandler}
           />
           <PostContainer
-              value = {this.state.newComment}
+              name = "newComment"
+              value = {this.state.searchTerm}
               data = {dummyData}
               loadingMSG = {this.loadingMSG}
               updateHandler = {this.updateHandler}

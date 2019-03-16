@@ -17,6 +17,11 @@ const PostContainer = (props) => {
       {props.data.length > 0
 
         ? (
+
+
+          
+
+
           props.data.map(dataItem => {
 
             return (
