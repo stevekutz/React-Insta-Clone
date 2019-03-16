@@ -26,8 +26,11 @@ const SearchBar = (props) => {
 
       <input
         type = "text"
+        name = "searchTerm"
+        value = {props.value}
         placeholder= " search here..."
         className = "searchInput"
+        onChange = {props.updateHandler}
       />
 
       <div className= "right-content">

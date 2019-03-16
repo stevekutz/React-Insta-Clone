@@ -11,8 +11,10 @@ class App extends Component {
     super();
     this.state = {
       dumdata: [],
-
+      newComment: '',
+      searchTerm: '',
     };
+
     this.loadingMSG = 'Loading Data';
 
 
@@ -78,9 +80,11 @@ class App extends Component {
     return (
       <div className="main-app">
           <SearchBar
-              updateHandler = {this.updateHandler}
+            value = {this.state.searchTerm}
+            updateHandler = {this.updateHandler}
           />
           <PostContainer
+              value = {this.state.newComment}
               data = {dummyData}
               loadingMSG = {this.loadingMSG}
               updateHandler = {this.updateHandler}

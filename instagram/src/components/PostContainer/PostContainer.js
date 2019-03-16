@@ -31,6 +31,8 @@ const PostContainer = (props) => {
                 <CommentSection
                   comments = {dataItem.comments}
                   likes = {dataItem.likes}
+                  value = {props.value}
+                  name = {props.newComment}
                   updateHandler = {props.updateHandler}
                   handleSubmit = {props.handleSubmit}
                   likeIncrementHandler = {props.likeIncrementHandler}

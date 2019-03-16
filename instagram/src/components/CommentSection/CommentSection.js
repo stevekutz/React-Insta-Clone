@@ -16,7 +16,7 @@ class CommentSection extends React.Component {
       comments: [],
       newComment: '',
       likes: 0,
-      searchItem: '',
+      searchTerm: '',
     };
     this.likesVar = 'likes';   // just for proof of concept
   //  this.likeIncrementHandler = props.likeIncrementHandler;
@@ -26,7 +26,9 @@ class CommentSection extends React.Component {
  //   console.log('*** CommentSection ComponentDidMount called');
     this.setState({
       comments: this.props.comments,
-      likes: this.props.likes
+      likes: this.props.likes,
+      newComment: this.props.newComment,
+      searchTerm: this.props.searchTerm,
     })
 
   }
@@ -56,7 +58,7 @@ class CommentSection extends React.Component {
     console.log('++++   handleSubmit says ', event);
 
     event.preventDefault();
-    this.newCommentHandler(event);
+    this.newCommentHandler();
   };
 
 
@@ -131,7 +133,10 @@ class CommentSection extends React.Component {
             onChange = {this.updateHandler}
 
           />
-          <button type = "submit"> Submit </button>
+          <button
+            type = "submit"
+            onClick = {this.newCommentHandler}
+          > Submit </button>
 
         </form>
 
