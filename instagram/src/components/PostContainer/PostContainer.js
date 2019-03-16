@@ -25,7 +25,9 @@ const PostContainer = (props) => {
               <div key = {dataItem.timestamp}>
 
                 <PostContainerHeader
-                  dataItem = {dataItem}
+                  user_name = {dataItem.username}
+                  image_URL = {dataItem.imageUrl}
+                  thumbnail_URL = {dataItem.thumbnailUrl}
                 />
 
                 <CommentSection
