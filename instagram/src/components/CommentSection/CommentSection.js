@@ -35,8 +35,9 @@ class CommentSection extends React.Component {
 
 
   componentDidUpdate(prevProps, prevState) {
-    if( prevState.comments !== this.state.comments) {
-      console.log('something has changed');
+    if( prevState.searchTerm !== '') {
+      console.log('search has changed');
+
     }
 
   }
@@ -63,19 +64,20 @@ class CommentSection extends React.Component {
 
 
   addNewComment = () =>  {
-    let newComment = {
-      username: "nnnn",
+    let newCommentItem = {
+      username: " webDude",
       text: this.state.newComment,
       id: Date.now(),
     };
 
     this.setState(prevState => {
       return {
-        comments: [...prevState.comments, newComment]
-      }
+        comments: [...prevState.comments, newCommentItem],
+        newComment: '',
 
-    })
+      };
 
+    });
   };
 
 

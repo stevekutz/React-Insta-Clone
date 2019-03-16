@@ -19,7 +19,7 @@ const PostContainer = (props) => {
         ? (
 
 
-          
+
 
 
           props.data.map(dataItem => {

@@ -4,7 +4,7 @@ import './commentsection.css';
 
 
 const Comment = (props) => {
- // console.log('Comment props  ', props);
+  console.log('Comment props  ', props);
 
   return(
     <div className = "comment-container">

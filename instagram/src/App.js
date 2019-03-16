@@ -11,7 +11,6 @@ class App extends Component {
     super();
     this.state = {
       dumdata: [],
-      newComment: '',
       searchTerm: '',
     };
 
@@ -39,40 +38,39 @@ class App extends Component {
 
   };
 
-
-  handleSubmit = event => {
-    console.log('++++   handleSubmit says ', event);
-
-    event.preventDefault();
-    this.newCommentHandler(event);
-  };
-
-
-  newCommentHandler = () =>  {
-    let newComment = {
-      comment: this.state.newComment,
-      id: Date.now(),
-    };
-
-    this.setState(prevState => {
-      return {
-        comments: [...prevState.comments, newComment]
-      }
-
-    })
-
-  };
-
   /*
-  likeIncrementHandler = () => {
-    console.log('>>>>>>>>>>>>> like handler fired !!!! ');
+    handleSubmit = event => {
+      console.log('++++   handleSubmit says ', event);
 
-    this.setState(prevState => {
-      return {likes: prevState.likes + 1 }
-    })
+      event.preventDefault();
+      this.newCommentHandler(event)    };
 
-  };
-  */
+    /*
+      newCommentHandler = () =>  {
+        let newComment = {
+          comment: this.state.newComment,
+          id: Date.now(),
+        };
+
+        this.setState(prevState => {
+          return {
+            comments: [...prevState.comments, newComment]
+
+
+        })
+
+      };
+
+      /*
+      likeIncrementHandler = () => {
+        console.log('>>>>>>>>>>>>> like handler fired !!!! ');
+
+        this.setState(prevState => {
+          return {likes: prevState.likes + 1 }
+        })
+
+      };
+      */
 
 
   render() {
@@ -83,17 +81,16 @@ class App extends Component {
     return (
       <div className="main-app">
           <SearchBar
+            name = "searchTerm"
             value = {this.state.searchTerm}
             updateHandler = {this.updateHandler}
           />
           <PostContainer
-              name = "newComment"
+              name = "searchTerm"
               value = {this.state.searchTerm}
               data = {dummyData}
               loadingMSG = {this.loadingMSG}
-              updateHandler = {this.updateHandler}
-              handleSubmit = {this.handleSubmit}
-              likeIncrementHandler = {this.likeIncrementHandler}
+
           />
 
       </div>
