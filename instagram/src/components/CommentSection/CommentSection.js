@@ -1,6 +1,6 @@
 import React from 'react';
 import CommentsHeader from './CommentsHeader';
-import CommentsHeader2 from './CommentsHeader2';
+import CommentsHeaderCLASS from './CommentsHeaderCLASS';
 import Comment from './Comment';
 import "./commentsection.css";
 
@@ -54,6 +54,8 @@ class CommentSection extends React.Component {
 
   render() {
 
+    console.log('>>>>>> ', this.state.likes  );
+
     return(
       <div className = "commentsSection-container">
 
@@ -63,7 +65,7 @@ class CommentSection extends React.Component {
           likeIncrementHandler = {this.likeIncrementHandler}
         />
 
-        <CommentsHeader2
+        <CommentsHeaderCLASS
           likes = {this.state.likes}
           likesVar = {this.likesVar}
           likeIncrementHandler = {this.likeIncrementHandler}

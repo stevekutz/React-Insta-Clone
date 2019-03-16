@@ -6,19 +6,19 @@ import chat from '../img/Bubble_chat.png';
 
 import './commentsection.css';
 
-class CommentsHeader2 extends React.Component {
+class CommentsHeaderCLASS extends React.Component {
   constructor(props) {
-    console.log('!!!! CommentsHeader2 props  ', props);
+    console.log('!!!! CommentsHeaderCLASS props  ', props);
     super(props);
     this.state = {
-      likes : 0,
+      likes: props.likes,
     }
 
   }
 
 
  componentDidMount() {
-  //  console.log('@@@@@  CommentsHeader2 called ');
+    console.log('@@@@@  CommentsHeaderCLASS CDM ');
 
     this.setState({
       likes: this.props.likes
@@ -28,17 +28,19 @@ class CommentsHeader2 extends React.Component {
 
 
   render() {
+
+
     return(
       <div className = "commentsHeader-container">
         <div className = "commentsHeaderIMG">
           <img
             src = {heart}
             alt = "heartIMG"
-            onClick = { this.likeIncrementHandler }
+            onClick = { this.props.likeIncrementHandler }
           />
           <img src = {chat} alt = "Bubble_chat"/>
         </div>
-        <h3 className = "commentsHeaderLikes"> {this.likes} {this.likesVar} </h3>
+        <h3 className = "commentsHeaderLikes"> {this.state.likes} {this.props.likesVar} </h3>
       </div>
     )
 
@@ -47,4 +49,4 @@ class CommentsHeader2 extends React.Component {
 }
 
 
-export default CommentsHeader2;
+export default CommentsHeaderCLASS;
