@@ -42,11 +42,14 @@ class CommentSection extends React.Component {
 
 
   componentDidUpdate(prevProps, prevState) {
-    if( prevState.searchTerm !== '') {
+    if( prevProps.searchTerm !== this.props.searchTerm) {
       console.log('search has changed to ', this.state.searchTerm);
+      this.setState(
+         {searchTerm: this.props.searchTerm}
+      )
     }
-
   }
+
 
 
   updateHandler = event => {
@@ -100,7 +103,7 @@ class CommentSection extends React.Component {
 
   render() {
 
-   // console.log('render shows >>>>>> ', this.state.likes  );
+   console.log('render shows >>>>>> ', this.state.searchTerm );
 
     return(
       <div className = "commentsSection-container">
@@ -142,7 +145,7 @@ class CommentSection extends React.Component {
               placeholder = "add a Comment"
               type = "text"
               name = 'newComment'
-              value = {this.state.value}
+              value = {this.state.newComment}
               onChange = {this.updateHandler}
 
             />

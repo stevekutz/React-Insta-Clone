@@ -87,7 +87,7 @@ class App extends Component {
           />
           <PostContainer
               name = "searchTerm"
-              value = {this.state.searchTerm}
+              searchTerm = {this.state.searchTerm}
               data = {dummyData}
               loadingMSG = {this.loadingMSG}
 

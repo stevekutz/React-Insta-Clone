@@ -18,10 +18,6 @@ const PostContainer = (props) => {
 
         ? (
 
-
-
-
-
           props.data.map(dataItem => {
 
             return (
@@ -36,8 +32,9 @@ const PostContainer = (props) => {
                 <CommentSection
                   comments = {dataItem.comments}
                   likes = {dataItem.likes}
-                  value = {props.value}
+
                   name = {props.newComment}
+                  searchTerm = {props.searchTerm}
                 />
 
               </div>
