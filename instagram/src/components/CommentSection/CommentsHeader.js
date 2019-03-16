@@ -12,7 +12,11 @@ const CommentsHeader = (props) => {
   return(
     <div className = "commentsHeader-container">
       <div className = "commentsHeaderIMG">
-        <img src = {heart} alt = "heartIMG"/>
+        <img
+          src = {heart}
+          alt = "heartIMG"
+          onClick = { props.likeIncrementHandler }
+        />
         <img src = {chat} alt = "Bubble_chat"/>
       </div>
       <h3 className = "commentsHeaderLikes"> {props.likes} {props.likesVar} </h3>

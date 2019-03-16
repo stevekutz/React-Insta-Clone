@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentsHeader from './CommentsHeader';
+import CommentsHeader2 from './CommentsHeader2';
 import Comment from './Comment';
 import "./commentsection.css";
 
@@ -7,7 +8,7 @@ import "./commentsection.css";
 
 class CommentSection extends React.Component {
   constructor(props) {
-    console.log('CommentSection props ', props);
+ //   console.log('CommentSection props ', props);
 
 
     super(props);
@@ -16,18 +17,13 @@ class CommentSection extends React.Component {
       newComment: '',
       likes: 0,
 
-
-
     };
     this.likesVar = 'likes';   // just for proof of concept
 
   }
 
-
-
-
   componentDidMount () {
-    console.log('*** CommentSection ComponentDidMount called');
+ //   console.log('*** CommentSection ComponentDidMount called');
     this.setState({
       comments: this.props.comments,
       likes: this.props.likes
@@ -35,15 +31,45 @@ class CommentSection extends React.Component {
 
   }
 
+  updateHandler = event => {
+    console.log(
+      '******** target name & value in updated handler',
+      event.target.name,
+      event.target.value
+    );
+
+    // use controlled component to manage events
+    this.setState({[event.target.name]: event.target.value} );
+
+  };
+
+
+  likeIncrementHandler = () => {
+    this.setState(prevState => {
+      return {likes: prevState + 1 }
+    })
+
+  };
+
 
   render() {
 
     return(
       <div className = "commentsSection-container">
+
         <CommentsHeader
           likes = {this.state.likes}
           likesVar = {this.likesVar}
+          likeIncrementHandler = {this.likeIncrementHandler}
         />
+
+        <CommentsHeader2
+          likes = {this.state.likes}
+          likesVar = {this.likesVar}
+          likeIncrementHandler = {this.likeIncrementHandler}
+        />
+
+
 
         {this.state.comments.length > 0 ?
           (
@@ -51,29 +77,14 @@ class CommentSection extends React.Component {
               <Comment
                 comment = {comment}
                 key = {i}
-
               />
               )
-
-
-
-
-
-
-
             )
           )
           :
           (
             <h2> loading comments </h2>
-
-
           )
-
-
-
-
-
         }
 
 
