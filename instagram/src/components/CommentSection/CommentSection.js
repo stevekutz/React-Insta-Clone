@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentsHeader from './CommentsHeader';
 import "./commentsection.css";
-import {dummyData} from "../../dummy-data";
+
 
 
 class CommentSection extends React.Component {
@@ -17,8 +17,8 @@ class CommentSection extends React.Component {
 
 
 
-    }
-
+    };
+    this.likesVar = 'likes';   // just for proof of concept
 
   }
 
@@ -39,6 +39,7 @@ class CommentSection extends React.Component {
       <div className = "commentsSection-container">
         <CommentsHeader
           likes = {this.state.likes}
+          likesVar = {this.likesVar}
         />
 
 

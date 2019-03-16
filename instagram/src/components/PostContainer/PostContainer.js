@@ -9,30 +9,37 @@ import './postcontainer.css';
 
 const PostContainer = (props) => {
  // console.log('Postcontainer props ', props);
+// give components ONLY data they need, do not pass everything !!!
+  console.log('***********  props.data.length', props.data.length);
 
   return (
     <div className = "postcontainerALL">
-      {props.data.map(dataItem => {
 
-        return (
-          <div key = {dataItem.timestamp}>
 
-            <PostContainerHeader
+      {props.data.length > 0
 
-              dataItem = {dataItem}
-            />
+        ? (
+          props.data.map(dataItem => {
 
-            <CommentSection
+            return (
+              <div key = {dataItem.timestamp}>
 
-              dataItem = {dataItem}
+                <PostContainerHeader
+                  dataItem = {dataItem}
+                />
 
-            />
+                <CommentSection
+                  dataItem = {dataItem}
+                />
 
-          </div>
+              </div>
 
-        )
+            )
 
-      })}
+          }))
+        : (
+          <h2> {props.loadingMSG} </h2>
+        )}
 
     </div>
   )

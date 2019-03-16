@@ -15,7 +15,7 @@ const CommentsHeader = (props) => {
         <img src = {heart} alt = "heartIMG"/>
         <img src = {chat} alt = "Bubble_chat"/>
       </div>
-      <h3 className = "commentsHeaderLikes"> {props.likes} likes </h3>
+      <h3 className = "commentsHeaderLikes"> {props.likes} {props.likesVar} </h3>
 
 
 

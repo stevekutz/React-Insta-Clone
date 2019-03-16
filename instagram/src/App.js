@@ -12,8 +12,8 @@ class App extends Component {
     this.state = {
       dumdata: [],
 
-    }
-
+    };
+    this.loadingMSG = 'Loading Data';
 
 
   }
@@ -37,7 +37,7 @@ class App extends Component {
           <SearchBar />
           <PostContainer
               data = {dummyData}
-
+              loadingMSG = {this.loadingMSG}
 
           />
 
