@@ -16,16 +16,7 @@ const CommentsHeader = (props) => {
         <img src = {chat} alt = "Bubble_chat"/>
       </div>
       <h3 className = "commentsHeaderLikes"> {props.likes} {props.likesVar} </h3>
-
-
-
     </div>
-
-
-
-
-
-
   )
 
 

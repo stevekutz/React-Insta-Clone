@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentsHeader from './CommentsHeader';
+import Comment from './Comment';
 import "./commentsection.css";
 
 
@@ -23,11 +24,13 @@ class CommentSection extends React.Component {
   }
 
 
+
+
   componentDidMount () {
     console.log('*** CommentSection ComponentDidMount called');
     this.setState({
-      comments: this.props.dataItem.comments,
-      likes: this.props.dataItem.likes
+      comments: this.props.comments,
+      likes: this.props.likes
     })
 
   }
@@ -42,6 +45,36 @@ class CommentSection extends React.Component {
           likesVar = {this.likesVar}
         />
 
+        {this.state.comments.length > 0 ?
+          (
+            this.state.comments.map( (comment, i) => (
+              <Comment
+                comment = {comment}
+                key = {i}
+
+              />
+              )
+
+
+
+
+
+
+
+            )
+          )
+          :
+          (
+            <h2> loading comments </h2>
+
+
+          )
+
+
+
+
+
+        }
 
 
 

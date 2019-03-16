@@ -9,8 +9,6 @@ import './postcontainer.css';
 
 const PostContainer = (props) => {
  // console.log('Postcontainer props ', props);
-// give components ONLY data they need, do not pass everything !!!
-  console.log('***********  props.data.length', props.data.length);
 
   return (
     <div className = "postcontainerALL">
@@ -31,7 +29,8 @@ const PostContainer = (props) => {
                 />
 
                 <CommentSection
-                  dataItem = {dataItem}
+                  comments = {dataItem.comments}
+                  likes = {dataItem.likes}
                 />
 
               </div>

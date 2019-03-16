@@ -2,20 +2,20 @@
   border: 1px solid darkorange;
   width: 100%;
   display: flex;
-
+  flex-direction: column;
 }
 
 
 .commentsHeader-container{
   border: 2px solid palevioletred;
-  width: 30%;
+  width: 40%;
   padding: .5rem;
 
 }
 
 .commentsHeaderIMG{
   border: 1px solid slateblue;
-  width: 35%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   padding: .25rem;
@@ -26,10 +26,37 @@
 
 .commentsHeaderLikes {
   border: 1px solid cornflowerblue;
-  width: 50%;
+  width: 100%;
   display: flex;
   font-size: 1.5rem;
   line-height: 1.5rem;
   font-weight: bold;
+
+}
+
+.comment-container {
+  border: 1px solid darkviolet;
+  width: 90%;
+
+  font-size: .25rem;
+  margin: .25rem 1rem;
+}
+
+.userName{
+  border: 1px solid green;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.comment {
+  border: 1px solid mediumvioletred;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding: 0;
+  vertical-align: baseline;
 
 }
