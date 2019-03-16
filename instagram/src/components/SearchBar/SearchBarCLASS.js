@@ -6,13 +6,20 @@ import compass from '../img/compass.png';
 import heart from '../img/heart-icon.png';
 import person from '../img/person.png';
 
-const SearchBar = (props) => {
-   console.log('Search props ', props);
+class SearchBarCLASS extends React.Component{
+  constructor(props) {
+    console.log('Search props ', props);
+    super(props);
+    this.state = {
+      allCommments: [],
+
+    }
+
+  }
 
 
 
-
-
+  render() {
 
 
 
@@ -28,6 +35,7 @@ const SearchBar = (props) => {
         type = "text"
         placeholder= " search here..."
         className = "searchInput"
+
       />
 
       <div className= "right-content">
@@ -40,8 +48,8 @@ const SearchBar = (props) => {
 
 
   )
+  }
 
+}
 
-};
-
-export default SearchBar;
+export default SearchBarCLASS;

@@ -8,7 +8,7 @@ import "./commentsection.css";
 
 class CommentSection extends React.Component {
   constructor(props) {
- //   console.log('CommentSection props ', props);
+    console.log('CommentSection props ', props);
 
 
     super(props);
@@ -16,10 +16,10 @@ class CommentSection extends React.Component {
       comments: [],
       newComment: '',
       likes: 0,
-
+      searchItem: '',
     };
     this.likesVar = 'likes';   // just for proof of concept
-
+  //  this.likeIncrementHandler = props.likeIncrementHandler;
   }
 
   componentDidMount () {
@@ -30,6 +30,15 @@ class CommentSection extends React.Component {
     })
 
   }
+
+
+  componentDidUpdate(prevProps, prevState) {
+    if( prevState.comments !== this.state.comments) {
+      console.log('something has changed');
+    }
+
+  }
+
 
   updateHandler = event => {
     console.log(
@@ -43,10 +52,33 @@ class CommentSection extends React.Component {
 
   };
 
+  handleSubmit = event => {
+    console.log('++++   handleSubmit says ', event);
+
+    event.preventDefault();
+    this.newCommentHandler(event);
+  };
+
+
+  newCommentHandler = () =>  {
+    let newComment = {
+      comment: this.state.newComment,
+      id: Date.now(),
+    };
+
+    this.setState(prevState => {
+      return {
+        comments: [...prevState.comments, newComment]
+      }
+
+    })
+
+  };
+
 
   likeIncrementHandler = () => {
     this.setState(prevState => {
-      return {likes: prevState + 1 }
+      return {likes: prevState.likes + 1 }
     })
 
   };
@@ -54,7 +86,7 @@ class CommentSection extends React.Component {
 
   render() {
 
-    console.log('>>>>>> ', this.state.likes  );
+   // console.log('render shows >>>>>> ', this.state.likes  );
 
     return(
       <div className = "commentsSection-container">
@@ -68,7 +100,7 @@ class CommentSection extends React.Component {
         <CommentsHeaderCLASS
           likes = {this.state.likes}
           likesVar = {this.likesVar}
-          likeIncrementHandler = {this.likeIncrementHandler}
+         // likeIncrementHandler = {this.likeIncrementHandler}
         />
 
 
@@ -89,23 +121,27 @@ class CommentSection extends React.Component {
           )
         }
 
+        <form onSubmit = {this.handleSubmit}>
+          <input
+            className = "addComment"
+            placeholder = "add a Comment"
+            type = "text"
+            name = 'newComment'
+            value = {this.state.newComment}
+            onChange = {this.updateHandler}
 
+          />
+          <button type = "submit"> Submit </button>
+
+        </form>
 
       </div>
-
-
 
 
     )
 
 
-
-
-
   }
-
-
-
 
 
 

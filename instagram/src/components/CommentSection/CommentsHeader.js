@@ -7,7 +7,7 @@ import chat from '../img/Bubble_chat.png';
 import './commentsection.css';
 
 const CommentsHeader = (props) => {
-  console.log('CommentsHeader props  ', props);
+   console.log('CommentsHeader props  ', props);
 
   return(
     <div className = "commentsHeader-container">

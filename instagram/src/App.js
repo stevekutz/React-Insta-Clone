@@ -25,20 +25,67 @@ class App extends Component {
   }
 
 
+  updateHandler = event => {
+    console.log(
+      '******** target name & value in updated handler',
+      event.target.name,
+      event.target.value
+    );
 
+    // use controlled component to manage events
+    this.setState({[event.target.name]: event.target.value} );
+
+  };
+
+
+  handleSubmit = event => {
+    console.log('++++   handleSubmit says ', event);
+
+    event.preventDefault();
+    this.newCommentHandler(event);
+  };
+
+
+  newCommentHandler = () =>  {
+    let newComment = {
+      comment: this.state.newComment,
+      id: Date.now(),
+    };
+
+    this.setState(prevState => {
+      return {
+        comments: [...prevState.comments, newComment]
+      }
+
+    })
+
+  };
+
+  likeIncrementHandler = () => {
+    console.log('>>>>>>>>>>>>> like handler fired !!!! ');
+
+    this.setState(prevState => {
+      return {likes: prevState.likes + 1 }
+    })
+
+  };
 
   render() {
   //  console.log('**** render called');
-  //  console.log('dumdata is ', this.state.dumdata);
+  console.log('dumdata is ', this.state.dumdata);
 
 
     return (
       <div className="main-app">
-          <SearchBar />
+          <SearchBar
+              updateHandler = {this.updateHandler}
+          />
           <PostContainer
               data = {dummyData}
               loadingMSG = {this.loadingMSG}
-
+              updateHandler = {this.updateHandler}
+              handleSubmit = {this.handleSubmit}
+              likeIncrementHandler = {this.likeIncrementHandler}
           />
 
       </div>
