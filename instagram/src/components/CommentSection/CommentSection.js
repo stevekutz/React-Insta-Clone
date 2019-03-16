@@ -33,11 +33,17 @@ class CommentSection extends React.Component {
 
   }
 
+  incrementHandler = () => {
+    this.setState(prevState => {
+      return {count: prevState.count + 1}
+    });
+
+  };
+
 
   componentDidUpdate(prevProps, prevState) {
     if( prevState.searchTerm !== '') {
-      console.log('search has changed');
-
+      console.log('search has changed to ', this.state.searchTerm);
     }
 
   }
