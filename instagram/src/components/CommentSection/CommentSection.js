@@ -117,14 +117,14 @@ class CommentSection extends React.Component {
         <CommentsHeaderCLASS
           likes = {this.state.likes}
           likesVar = {this.likesVar}
-         // likeIncrementHandler = {this.likeIncrementHandler}
         />
 
 
 
         {this.state.comments.length > 0 ?
           (
-            this.state.comments.map( (comment, i) => (
+            this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
+                                .map( (comment, i) => (
               <Comment
                 comment = {comment}
                 key = {i}
