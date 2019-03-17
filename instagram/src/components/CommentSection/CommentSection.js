@@ -100,6 +100,8 @@ class CommentSection extends React.Component {
 
   };
 
+  // Ryan's cool way using RegEx
+  // this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
 
   render() {
 
@@ -123,7 +125,7 @@ class CommentSection extends React.Component {
 
         {this.state.comments.length > 0 ?
           (
-            this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
+            this.state.comments.filter(comment => comment.username.includes(this.state.searchTerm))
                                 .map( (comment, i) => (
               <Comment
                 comment = {comment}
