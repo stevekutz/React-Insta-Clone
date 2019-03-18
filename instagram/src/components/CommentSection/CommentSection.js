@@ -91,9 +91,12 @@ class CommentSection extends React.Component {
     })
 
   };
-
+  // *******  search methods ***
   // Ryan's cool way using RegEx
   // this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
+
+  // my way with include
+  // this.state.comments.filter(comment => comment.username.includes(this.state.searchTerm))
 
   render() {
 
@@ -137,19 +140,18 @@ class CommentSection extends React.Component {
           onSubmit = {this.handleSubmit}
         >
 
+
+
             <input
               className = "addComment"
               placeholder = "add a Comment"
               type = "text"
               name = 'newComment'
-              value = {this.state.newComment}
+              defaultValue = {this.state.newComment}
               onChange = {this.updateHandler}
 
             />
 
-          <input
-            type = "submit"
-            value = "submit"/>
         </form>
 
 

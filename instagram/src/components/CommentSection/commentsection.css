@@ -63,16 +63,25 @@
 }
 
 .newCommentForm {
-  border: 1px solid hotpink;
+  border: 5px solid hotpink;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
 
 
 }
 
 .addComment {
   border: 1px solid rebeccapurple;
-  width: 100%;
+  width: 90%;
+
+}
+
+.inputSubmit {
+  border: 1px solid dodgerblue;
+  display: flex;
+
+  margin: 0 auto;
+
 
 }
