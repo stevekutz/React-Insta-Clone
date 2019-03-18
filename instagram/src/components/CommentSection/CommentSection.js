@@ -3,6 +3,7 @@ import CommentsHeader from './CommentsHeader';
 import CommentsHeaderCLASS from './CommentsHeaderCLASS';
 import Comment from './Comment';
 import AddNewComment from './AddNewComment';
+import moment from 'moment';
 import "./commentsection.css";
 
 
@@ -60,21 +61,29 @@ class CommentSection extends React.Component {
 
   handleSubmit = event => {
     event.persist();
-    console.log('++++   handleSubmit says ', event);
+    console.log(
+      '##### event in handleSubmit',
+      event
+    );
     event.preventDefault();
     this.addNewComment(event);
+
+
   };
 
 
   addNewComment = (event) =>  {
+    console.log('++++   addNewComment state ', event);
     let newCommentItem = {
       username: " webDude",
       text: this.state.newComment,
       id: Date.now(),
+      selected: false,
+      timeVal: moment().format('MMMM Do YYYY'),
     };
 
 
-    if(this.state.newComment !== undefined){
+   if(this.state.newComment !== undefined){
       this.setState(prevState => {
         return {
           comments: [...prevState.comments, newCommentItem],
@@ -91,11 +100,15 @@ class CommentSection extends React.Component {
     })
 
   };
+
+
+
+
   // *******  search methods ***
-  // Ryan's cool way using RegEx
+  // Ryan's cool way using RegEx for lazy searches
   // this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
 
-  // my way with include
+  // my way with include, first character in searchTerm doesnot always match up with first char in username
   // this.state.comments.filter(comment => comment.username.includes(this.state.searchTerm))
 
   render() {
@@ -120,7 +133,7 @@ class CommentSection extends React.Component {
 
         {this.state.comments.length > 0 ?
           (
-            this.state.comments.filter(comment => comment.username.includes(this.state.searchTerm))
+            this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
                                 .map( (comment, i) => (
               <Comment
                 comment = {comment}
@@ -139,15 +152,18 @@ class CommentSection extends React.Component {
           className = "newCommentForm"
           onSubmit = {this.handleSubmit}
         >
-
-
+          {
+/* changing value to defaultValue gets rid of warning */
+  /* side-effect is that previous text persists instead of */
+  /* displaying placeholder => 'Add a Comment'
+  * */}
 
             <input
               className = "addComment"
-              placeholder = "add a Comment"
+              placeholder = "Add a Comment"
               type = "text"
               name = 'newComment'
-              defaultValue = {this.state.newComment}
+              value = {this.state.newComment}
               onChange = {this.updateHandler}
 
             />
