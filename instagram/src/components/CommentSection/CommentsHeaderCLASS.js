@@ -8,7 +8,7 @@ import './commentsection.css';
 
 class CommentsHeaderCLASS extends React.Component {
   constructor(props) {
- //   console.log('!!!! CommentsHeaderCLASS props  ', props);
+    console.log('!!!! CommentsHeaderCLASS props  ', props);
     super(props);
     this.state = {
       likes: 0,

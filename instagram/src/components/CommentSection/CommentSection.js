@@ -2,6 +2,7 @@ import React from 'react';
 import CommentsHeader from './CommentsHeader';
 import CommentsHeaderCLASS from './CommentsHeaderCLASS';
 import Comment from './Comment';
+import AddNewComment from './AddNewComment';
 import "./commentsection.css";
 
 
@@ -33,13 +34,6 @@ class CommentSection extends React.Component {
 
   }
 
-  incrementHandler = () => {
-    this.setState(prevState => {
-      return {count: prevState.count + 1}
-    });
-
-  };
-
 
   componentDidUpdate(prevProps, prevState) {
     if( prevProps.searchTerm !== this.props.searchTerm) {
@@ -65,32 +59,30 @@ class CommentSection extends React.Component {
   };
 
   handleSubmit = event => {
+    event.persist();
     console.log('++++   handleSubmit says ', event);
-
     event.preventDefault();
-    this.addNewComment();
+    this.addNewComment(event);
   };
 
 
-  addNewComment = () =>  {
+  addNewComment = (event) =>  {
     let newCommentItem = {
       username: " webDude",
       text: this.state.newComment,
       id: Date.now(),
     };
 
-    this.setState(prevState => {
-      return {
-        comments: [...prevState.comments, newCommentItem],
-        newComment: '',
 
-      };
-
-    });
+    if(this.state.newComment !== undefined){
+      this.setState(prevState => {
+        return {
+          comments: [...prevState.comments, newCommentItem],
+          newComment: '',
+        };
+      });
+    }
   };
-
-
-
 
 
   likeIncrementHandler = () => {
@@ -105,7 +97,7 @@ class CommentSection extends React.Component {
 
   render() {
 
-   console.log('render shows >>>>>> ', this.state.searchTerm );
+   console.log('render shows commments >>>>>> ', this.state.comments );
 
     return(
       <div className = "commentsSection-container">
@@ -140,8 +132,11 @@ class CommentSection extends React.Component {
           )
         }
 
-        <form onSubmit = {this.handleSubmit}>
-          <label> COMMENT:
+        <form
+          className = "newCommentForm"
+          onSubmit = {this.handleSubmit}
+        >
+
             <input
               className = "addComment"
               placeholder = "add a Comment"
@@ -151,16 +146,16 @@ class CommentSection extends React.Component {
               onChange = {this.updateHandler}
 
             />
-          </label>
 
-
+          <input
+            type = "submit"
+            value = "submit"/>
         </form>
+
 
       </div>
 
-
     )
-
 
   }
 
