@@ -45,6 +45,12 @@ class CommentSection extends React.Component {
     }
   }
 
+  selectedHandler = (event) => {
+    alert('text chosen: ', event.value);
+
+
+
+  };
 
 
   updateHandler = event => {
@@ -138,6 +144,7 @@ class CommentSection extends React.Component {
               <Comment
                 comment = {comment}
                 key = {i}
+                selectedHandler = {this.selectedHandler}
               />
               )
             )

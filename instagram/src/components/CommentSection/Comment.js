@@ -9,7 +9,11 @@ const Comment = (props) => {
   //  <h5 className = "commentDate" >{props.comment.timeVal}</h5>
 
   return(
-    <div className = "comment-container">
+    <div
+      className = "comment-container"
+      onClick = {props.selectedHandler}
+    >
+
       <h3 className = "comment">
         <span className = "userName">{props.comment.username} </span>
               {props.comment.text}</h3>
