@@ -45,8 +45,8 @@ class CommentSection extends React.Component {
     }
   }
 
-  selectedHandler = (event) => {
-    alert('text chosen: ', event.value);
+  selectedHandler = (comment) => {
+    console.log('SELECTED COMMENT:', comment);
 
 
 
@@ -141,8 +141,11 @@ class CommentSection extends React.Component {
           (
             this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
                                 .map( (comment, i) => (
+                                 
+
               <Comment
                 comment = {comment}
+                commentSelected = {false}
                 key = {i}
                 selectedHandler = {this.selectedHandler}
               />

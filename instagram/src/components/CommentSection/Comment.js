@@ -11,7 +11,7 @@ const Comment = (props) => {
   return(
     <div
       className = "comment-container"
-      onClick = {props.selectedHandler}
+      onClick = {() => props.selectedHandler(props.comment)}
     >
 
       <h3 className = "comment">
