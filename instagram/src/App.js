@@ -40,25 +40,9 @@ class App extends Component {
   };
 
   render() {
-  //  console.log('**** render called');
-  //  console.log('dumdata is ', this.state.dumdata);
-
-
     return (
       <div className="main-app">
-          <SearchBar
-            name = "searchTerm"
-            value = {this.state.searchTerm}
-            updateHandler = {this.updateHandler}
-          />
-          <PostContainer
-              name = "searchTerm"
-              searchTerm = {this.state.searchTerm}
-              data = {dummyData}
-              loadingMSG = {this.loadingMSG}
-
-          />
-
+          <PostsPage />
       </div>
     )
   }
