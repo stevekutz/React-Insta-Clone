@@ -20,8 +20,7 @@ class CommentSection extends React.Component {
       likes: 0,
       searchTerm: '',
     };
-    this.likesVar = 'likes';   // just for proof of concept
-  //  this.likeIncrementHandler = props.likeIncrementHandler;
+    this.likesVar = 'likes';
   }
 
   componentDidMount () {
@@ -29,7 +28,7 @@ class CommentSection extends React.Component {
     this.setState({
       comments: this.props.comments,
       likes: this.props.likes,
-      newComment: this.props.newComment,
+      newComment: this.state.newComment,   // NOT  newComment: this.props.newComment
       searchTerm: this.props.searchTerm,
     })
 
@@ -141,7 +140,7 @@ class CommentSection extends React.Component {
           (
             this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
                                 .map( (comment, i) => (
-                                 
+
 
               <Comment
                 comment = {comment}

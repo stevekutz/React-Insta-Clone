@@ -17,7 +17,7 @@ const Comment = (props) => {
       <h3 className = "comment">
         <span className = "userName">{props.comment.username} </span>
               {props.comment.text}</h3>
-      <h5 className = "commentDate" >      {props.comment.timeVal}</h5>
+      <h5 className = "commentDate" >  {props.comment.timeVal}</h5>
     </div>
 
   )

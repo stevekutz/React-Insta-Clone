@@ -52,7 +52,7 @@
   line-height: 1.5rem;
   font-weight: bold;
   width: 100%;
-  padding: 0;
+  padding: 0 .5rem;
   vertical-align: baseline;
 }
 
@@ -64,6 +64,7 @@
   vertical-align: baseline;
 
 }
+
 
 .newCommentForm {
   border: 5px solid hotpink;
@@ -92,7 +93,7 @@
 .commentDate {
   border: 1px solid forestgreen;
   text-align: right;
-  padding: 0;
-
+  padding: 0 .5rem;
+  font-family: Benchnine;
 
 }
