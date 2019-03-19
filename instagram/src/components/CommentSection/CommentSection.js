@@ -48,7 +48,7 @@ class CommentSection extends React.Component {
     console.log('SELECTED COMMENT:', comment);
 
 
-
+    
   };
 
 

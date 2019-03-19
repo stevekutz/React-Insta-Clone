@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-
 import {dummyData} from './dummy-data';
 import './App.css';
+
+import PostsPage from './components/PostContainer/PostsPage';
 
 class App extends Component {
   constructor() {
@@ -59,7 +60,7 @@ class App extends Component {
           />
 
       </div>
-    );
+    )
   }
 }
 
