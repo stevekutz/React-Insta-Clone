@@ -1,11 +1,9 @@
 .postcontainerALL {
-  border: 1px solid red;
   width: 100%;
 }
 
 
 .postcontainer {
-  border: 4px solid green;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,7 +14,6 @@
 }
 
 .postcontainer-header {
-  border: 1px solid yellowgreen;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -27,16 +24,14 @@
 }
 
 .headerIMG {
-  border: 1px solid firebrick;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   padding: 1rem;
 
 }
 
 .userName {
-  border: 1px solid firebrick;
   padding: 1rem;
   font-family: Roboto;
   font-size: 1.5rem;
@@ -50,7 +45,6 @@
 
 
 .postImage {
-  border: 1px solid blueviolet;
   width: 100%;
 
 

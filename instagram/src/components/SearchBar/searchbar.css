@@ -1,5 +1,4 @@
-.searchbar-container{
-  border: 1px solid deeppink;
+.searchbar-container{;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -8,22 +7,21 @@
 }
 
 .left-content, .right-content {
-  border: 1px solid orangered;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 25%;
+  width: 35%;
   margin: .5rem 2rem;
   padding: .25rem;
 }
 
 .searchInput{
-  border: 1px solid palevioletred;
-  width: 30%;
-  line-height: 2.25rem;
-  font-size: 2rem;
+  width: 20%;
+  line-height: 1.25rem;
+  font-size: 1rem;
   font-style: italic;
-  font-family: Lato;
+
+  outline-style: none;
 }
 
 img {

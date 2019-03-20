@@ -1,5 +1,4 @@
-.commentsSection-container{
-  border: 10px solid darkorange;
+.commentsSection-container{;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,14 +7,12 @@
 
 
 .commentsHeader-container{
-  border: 2px solid palevioletred;
   width: 40%;
   padding: .5rem;
 
 }
 
 .commentsHeaderIMG{
-  border: 1px solid slateblue;
   width: 50%;
   display: flex;
   justify-content: space-between;
@@ -26,7 +23,6 @@
 
 
 .commentsHeaderLikes {
-  border: 1px solid cornflowerblue;
   width: 100%;
   display: flex;
   font-size: 1.5rem;
@@ -36,8 +32,7 @@
 }
 
 .comment-container {
-  border: 5px solid darkviolet;
-  width: 90%;
+  width: 95%;
   display: flex;
   align-items: center;
   align-content: center;
@@ -47,27 +42,24 @@
 }
 
 .userName{
-  border: 1px solid green;
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: bold;
   width: 100%;
-  padding: 0 .5rem;
+  padding: 0;
   vertical-align: baseline;
 }
 
 .comment {
-  border: 1px solid mediumvioletred;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  padding: 0;
+  padding: 0 .5rem;
   vertical-align: baseline;
 
 }
 
 
 .newCommentForm {
-  border: 5px solid hotpink;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -76,22 +68,20 @@
 }
 
 .addComment {
-  border: 1px solid rebeccapurple;
   width: 90%;
-
+  margin: 0 auto;
+  outline-style: none;
+  font-size: 1rem;
+  border-radius: .5rem;
 }
 
 .inputSubmit {
-  border: 1px solid dodgerblue;
   display: flex;
-
   margin: 0 auto;
-
 
 }
 
 .commentDate {
-  border: 1px solid forestgreen;
   text-align: right;
   padding: 0 .5rem;
   font-family: Benchnine;

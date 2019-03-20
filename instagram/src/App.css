@@ -9,7 +9,6 @@
 BenchNine|Hind|Karla|Lato|Lobster+Two|Oxygen|Pacifico|Roboto
  */
 .main-app{
-  border: 10px solid blue;
   max-width: 880px;
   margin: 0 auto;
   display: flex;

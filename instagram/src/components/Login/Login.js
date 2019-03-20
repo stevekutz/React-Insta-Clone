@@ -44,29 +44,30 @@ class Login extends React.Component {
   render() {
     return(
       <div className = "login-container">
-        <h1 className = "loginTitle">Welcome to Instaclone</h1>
+        <h1 className = "loginTitle">Welcome to Instagram</h1>
 
         <form className = "loginForm">
 
           <input
             type = "text"
-            placeholder = "enter username"
+            placeholder = " enter username"
             name = "username"
             value = {this.state.username}
             onChange = {this.loginInputHandler}
-
+            className = "loginFormat"
           />
 
         <input
           type = "password"
-          placeholder = "enter password"
+          placeholder = " enter password"
           name = "password"
           value = {this.state.password}
           onChange = {this.loginInputHandler}
-
+          className = "loginFormat"
         />
 
         <button
+          className = "submitButton"
           onClick = {this.loginHandleSubmitHandler}
         > Submit
         </button>
