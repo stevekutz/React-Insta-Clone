@@ -1,6 +1,9 @@
 import React from 'react';
+import Login from '../Login/Login';
+import './authentication.css';
 
-const Authenticate = App =>
+
+const withAuthenticate = App =>
   class extends React.Component {
     constructor(props) {
       super(props);
@@ -13,21 +16,28 @@ const Authenticate = App =>
 
     componentDidMount() {
       console.log("Authenticate CDM called");
+
+      if(!localStorage.getItem('userName')) {
+        this.setState({logged_IN: false});
+      } else {
+        this.setState({logged_IN: true});
+      }
+
     }
 
     render() {
 
-      return(
 
-        <App/>
+        if(this.state.logged_IN) return <App/>;
 
-      )
+        return <Login />
+
 
     }
 
   };
 
-export default Authenticate;
+export default withAuthenticate;
 
 
 

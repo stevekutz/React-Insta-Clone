@@ -20,8 +20,8 @@ class Login extends React.Component {
   loginInputHandler = e => {
    console.log(
          'LOGIN  target name & value in updated handler',
-         event.target.name,
-         event.target.value
+         e.target.name,
+         e.target.value
        );
 
     // use controlled component to manage events
@@ -69,7 +69,7 @@ class Login extends React.Component {
         <button
           onClick = {this.loginHandleSubmitHandler}
         > Submit
-        </>
+        </button>
 
 
 
