@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './searchbar.css';
 import logoIMG from '../img/instagram_LOGO.jpg';
 import vertical_LINE from '../img/vertical_LINE_2.jpg';

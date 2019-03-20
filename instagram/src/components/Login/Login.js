@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './login.css';
 
 class Login extends React.Component {
@@ -9,11 +10,7 @@ class Login extends React.Component {
       password: '',
       attempts: 0,   // just for fun later
 
-
-
     }
-
-
 
   }
   // need submitLoginHandler & changeHandler
@@ -38,7 +35,6 @@ class Login extends React.Component {
     localStorage.setItem("username", username);
     window.location.reload();
 };
-
 
 
   render() {
@@ -67,9 +63,9 @@ class Login extends React.Component {
         />
 
         <button
-          className = "submitButton"
+          className = "loginButton"
           onClick = {this.loginHandleSubmitHandler}
-        > Submit
+        > Login
         </button>
 
 

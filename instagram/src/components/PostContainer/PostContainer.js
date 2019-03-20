@@ -1,10 +1,7 @@
 import React from 'react';
 import PostContainerHeader from './PostContainerHeader';
 import CommentSection from '../../components/CommentSection/CommentSection';
-
 import PropTypes from 'prop-types';
-
-
 import './postcontainer.css';
 
 const PostContainer = (props) => {
@@ -48,9 +45,6 @@ const PostContainer = (props) => {
     </div>
   )
 
-
-
-
 };
 
 
@@ -58,12 +52,7 @@ const PostContainer = (props) => {
 PostContainer.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object)
 
-
-
-
-
 };
-
 
 export default PostContainer;
 

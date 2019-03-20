@@ -1,9 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import heart from '../img/heart-icon.png';
 import chat from '../img/Bubble_chat.png';
-
-
-
 import './commentsection.css';
 
 const CommentsHeader = (props) => {

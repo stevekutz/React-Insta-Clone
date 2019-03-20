@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from '../Login/Login';
+import PropTypes from 'prop-types';
 import './authentication.css';
 
 
@@ -11,11 +12,9 @@ const withAuthenticate = App =>
         logged_IN: false
 
       }
-
     }
 
     componentDidMount() {
-      console.log("Authenticate CDM called");
 
       if(!localStorage.getItem('username')) {
         this.setState({logged_IN: false});
@@ -25,8 +24,15 @@ const withAuthenticate = App =>
 
     }
 
-    render() {
+/*
+ if(this.state.logged_IN) return <App/>;
 
+        return <Login />
+
+ */
+
+
+    render() {
 
         if(this.state.logged_IN) return <App/>;
 

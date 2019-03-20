@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-
 import './postcontainer.css';
-
 
 const PostContainerHeader = (props) => {
 
@@ -29,13 +26,11 @@ const PostContainerHeader = (props) => {
       </div>
     </div>
 
-
   )
 };
 
 PostContainerHeader.propTypes = {
   likes: PropTypes.number
 };
-
 
 export default PostContainerHeader;

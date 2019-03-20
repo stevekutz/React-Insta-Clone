@@ -1,11 +1,10 @@
 import React from 'react';
 import CommentsHeader from './CommentsHeader';
+import PropTypes from 'prop-types';
 import CommentsHeaderCLASS from './CommentsHeaderCLASS';
 import Comment from './Comment';
-
 import moment from 'moment';
 import "./commentsection.css";
-
 
 
 class CommentSection extends React.Component {
@@ -33,7 +32,6 @@ class CommentSection extends React.Component {
 
   }
 
-
   componentDidUpdate(prevProps, prevState) {
     if( prevProps.searchTerm !== this.props.searchTerm) {
       console.log('search has changed to ', this.state.searchTerm);
@@ -45,7 +43,6 @@ class CommentSection extends React.Component {
 
   selectedHandler = (comment) => {
     console.log('SELECTED COMMENT:', comment);
-
 
 
   };
@@ -64,7 +61,6 @@ class CommentSection extends React.Component {
 
 
   };
-
 
   addNewComment = (event) =>  {
     let newCommentItem = {
