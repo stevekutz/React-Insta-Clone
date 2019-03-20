@@ -7,14 +7,6 @@ import heart from '../img/heart-icon.png';
 import person from '../img/person.png';
 
 const SearchBar = (props) => {
-  //  console.log('Search props ', props);
-
-
-
-
-
-
-
 
   return (
     <div className = "searchbar-container">
@@ -40,10 +32,7 @@ const SearchBar = (props) => {
       </div>
 
     </div>
-
-
   )
-
 
 };
 

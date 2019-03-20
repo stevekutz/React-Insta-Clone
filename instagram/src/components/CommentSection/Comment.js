@@ -4,9 +4,6 @@ import './commentsection.css';
 
 
 const Comment = (props) => {
-  // console.log('Comment props  ', props);
-
-  //  <h5 className = "commentDate" >{props.comment.timeVal}</h5>
 
   return(
     <div

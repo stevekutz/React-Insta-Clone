@@ -4,42 +4,27 @@ import './commentsection.css';
 
 class AddNewComment extends React.Component {
   constructor(props){
-    console.log('=========> AddNewComment props ', props);
-
     super(props);
     this.state = {
       comments: [],
       value: '',
-
-
     }
-
   }
 
   componentDidMount () {
-    //   console.log('*** CommentSection ComponentDidMount called');
     this.setState({
       comments: this.props.comments,
     })
-
   }
 
 
   updateHandler = event => {
-    console.log(
-      '=====> target name & value in updated handler',
-      event.target.name,
-      event.target.value
-    );
-
     // use controlled component to manage events
     this.setState({[event.target.name]: event.target.value} );
-
   };
 
   handleSubmit = event => {
-    event.persist();
-    console.log('=====>   handleSubmit says ', event);
+   // event.persist();
     event.preventDefault();
     this.addNewComment(event);
   };
@@ -88,9 +73,7 @@ class AddNewComment extends React.Component {
 
 
 
-
     )
-
 
   }
 

@@ -12,11 +12,9 @@ class SearchBarCLASS extends React.Component{
     super(props);
     this.state = {
       allCommments: [],
-
     }
 
   }
-
 
 
   render() {

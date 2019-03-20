@@ -6,7 +6,6 @@ import './postcontainer.css';
 
 
 const PostContainerHeader = (props) => {
-   // console.log('PostContainerheader props  ' , props);
 
   return (
 
