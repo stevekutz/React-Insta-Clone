@@ -13,29 +13,19 @@ class Login extends React.Component {
     }
 
   }
-  // need submitLoginHandler & changeHandler
   loginInputHandler = e => {
-   console.log(
-         'LOGIN  target name & value in updated handler',
-         e.target.name,
-         e.target.value
-       );
-
     // use controlled component to manage events
     this.setState({[e.target.name]: e.target.value} );
 
   };
 
-
   loginHandleSubmitHandler  = e => {
-    const username = this.state.username;
-    // e.preventDefault();
+     e.preventDefault();   // no effect?
 
     console.log("username LOGGED!!!! ");
-    localStorage.setItem("username", username);
+    localStorage.setItem("username", this.state.username);
     window.location.reload();
 };
-
 
   render() {
     return(
@@ -53,41 +43,27 @@ class Login extends React.Component {
             className = "loginFormat"
           />
 
-        <input
-          type = "password"
-          placeholder = " enter password"
-          name = "password"
-          value = {this.state.password}
-          onChange = {this.loginInputHandler}
-          className = "loginFormat"
-        />
+          <input
+            type = "password"
+            placeholder = " enter password"
+            name = "password"
+            value = {this.state.password}
+            onChange = {this.loginInputHandler}
+            className = "loginFormat"
+          />
 
-        <button
-          className = "loginButton"
-          onClick = {this.loginHandleSubmitHandler}
-        > Login
-        </button>
-
-
+          <button
+            className = "loginButton"
+            onClick = {this.loginHandleSubmitHandler}
+          > Login
+          </button>
 
         </form>
 
       </div>
 
-
-
-
-
-
-
-
-
-
     )
-
-
   }
-
 
 }
 

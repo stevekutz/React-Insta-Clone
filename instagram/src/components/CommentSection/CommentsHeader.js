@@ -20,9 +20,6 @@ const CommentsHeader = (props) => {
     </div>
   )
 
-
-
-
 };
 
 

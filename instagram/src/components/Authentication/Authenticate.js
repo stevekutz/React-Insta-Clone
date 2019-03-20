@@ -17,29 +17,30 @@ const withAuthenticate = App =>
     componentDidMount() {
       /*
          if(!localStorage.getItem('username')) {
-       this.setState({logged_IN: false});
-     } else {
-       this.setState({logged_IN: true});
-     }
-
+            this.setState({logged_IN: false});
+         } else {
+            this.setState({logged_IN: true});
+         }
      */
-
-
+      // refactored into ternary
       (!localStorage.getItem('username'))
           ?  this.setState({logged_IN: false})
           :  this.setState({logged_IN: true})
-
     }
 
 
-
-
+   /*
+           if(this.state.logged_IN) return <App/>;
+            return <Login />
+    */
+      // refactored into ternary
     render() {
 
-        if(this.state.logged_IN) return <App/>;
-
-        return <Login />
-
+      return (
+        (this.state.logged_IN)
+          ?  <App/>
+          :  <Login />
+      )
 
     }
 

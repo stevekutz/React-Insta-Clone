@@ -34,7 +34,6 @@ class CommentSection extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if( prevProps.searchTerm !== this.props.searchTerm) {
-      console.log('search has changed to ', this.state.searchTerm);
       this.setState(
          {searchTerm: this.props.searchTerm}
       )
@@ -58,14 +57,12 @@ class CommentSection extends React.Component {
     event.persist();
     event.preventDefault();
     this.addNewComment(event);
-
-
   };
 
   addNewComment = (event) =>  {
     let newCommentItem = {
       // username: " webDude",
-      username: this.state.user,
+      username: this.state.user,   // MAGIC happens here!!!
       text: this.state.newComment,
       id: Date.now(),
       selected: false,
