@@ -112,11 +112,11 @@ class CommentSection extends React.Component {
         />
 
 
-        {this.state.comments.length > 0 ?
-          (
-            this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
-                                .map( (comment, i) => (
-
+        {this.state.comments.length > 0
+          ?
+          (this.state.comments.filter(comment => new RegExp(this.state.searchTerm).test(comment.username))
+                              .map( (comment, i) =>
+              (
               <Comment
                 comment = {comment}
                 commentSelected = {false}
@@ -127,9 +127,7 @@ class CommentSection extends React.Component {
             )
           )
           :
-          (
-            <h2> loading comments </h2>
-          )
+          (<h2> loading comments </h2>)
         }
 
         <form

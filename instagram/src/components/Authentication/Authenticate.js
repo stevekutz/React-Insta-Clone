@@ -21,7 +21,7 @@ const withAuthenticate = App =>
          } else {
             this.setState({logged_IN: true});
          }
-     */
+      */
       // refactored into ternary
       (!localStorage.getItem('username'))
           ?  this.setState({logged_IN: false})
@@ -32,13 +32,13 @@ const withAuthenticate = App =>
    /*
            if(this.state.logged_IN) return <App/>;
             return <Login />
-    */
+   */
       // refactored into ternary
     render() {
 
       return (
         (this.state.logged_IN)
-          ?  <App/>
+          ?  <App />
           :  <Login />
       )
 

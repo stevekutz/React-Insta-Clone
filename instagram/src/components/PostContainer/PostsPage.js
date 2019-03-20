@@ -16,50 +16,40 @@ class PostsPage extends React.Component {
 
     this.loadingMSG = 'Loading Data';
 
-
   }
 
   componentDidMount() {
-    //  console.log('*** App ComponentDidMount called');
     this.setState({dumdata: dummyData})
 
   }
 
 
   updateHandler = event => {
-    console.log(
-      '******** target name & value in updated handler',
-      event.target.name,
-      event.target.value
-    );
-
-    // use controlled component to manage events
     this.setState({[event.target.name]: event.target.value});
 
   };
 
   render() {
-    //  console.log('**** render called');
-    //  console.log('dumdata is ', this.state.dumdata);
-
 
     return (
       <div className="main-app">
+
         <SearchBar
           name="searchTerm"
           value={this.state.searchTerm}
           updateHandler={this.updateHandler}
         />
+
         <PostContainer
           name="searchTerm"
           searchTerm={this.state.searchTerm}
           data={dummyData}
           loadingMSG={this.loadingMSG}
-
         />
 
       </div>
     )
+
   }
 }
 
