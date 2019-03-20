@@ -1,0 +1,37 @@
+/*  font-family: Benchnine;
+   font-family: Karla;
+   font-family: Lato;
+   font-family: Hind;
+    Lobster
+    Pacifico
+    Roboto */
+
+
+.login-container{
+  border: 5px solid teal;
+  width: 600px;
+  background: hotpink;
+  margin: 0 auto;
+  font-family: Lato;
+  display: flex;
+  flex-direction: column;
+
+
+
+
+}
+
+.loginTitle{
+  border: 1px solid white;
+  font-family: Lobster;
+  font-size: 3rem;
+
+
+
+}
+
+.loginForm{
+  border: 1px solid slateblue;
+
+
+}

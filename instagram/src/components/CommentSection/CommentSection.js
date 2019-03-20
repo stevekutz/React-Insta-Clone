@@ -48,17 +48,17 @@ class CommentSection extends React.Component {
     console.log('SELECTED COMMENT:', comment);
 
 
-    
+
   };
 
 
   updateHandler = event => {
-    console.log(
+ /*   console.log(
       '##### target name & value in updated handler',
       event.target.name,
       event.target.value
     );
-
+ */
     // use controlled component to manage events
     this.setState({[event.target.name]: event.target.value} );
 
