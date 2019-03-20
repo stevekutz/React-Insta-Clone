@@ -17,7 +17,7 @@ const withAuthenticate = App =>
     componentDidMount() {
       console.log("Authenticate CDM called");
 
-      if(!localStorage.getItem('userName')) {
+      if(!localStorage.getItem('username')) {
         this.setState({logged_IN: false});
       } else {
         this.setState({logged_IN: true});

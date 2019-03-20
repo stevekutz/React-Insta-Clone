@@ -19,6 +19,8 @@ class CommentSection extends React.Component {
       newComment: '',
       likes: 0,
       searchTerm: '',
+      username: '',
+
     };
     this.likesVar = 'likes';
   }
@@ -30,6 +32,7 @@ class CommentSection extends React.Component {
       likes: this.props.likes,
       newComment: this.state.newComment,   // NOT  newComment: this.props.newComment
       searchTerm: this.props.searchTerm,
+      user: localStorage.getItem('username'),   //    Get LOCAL STORAGE username
     })
 
   }
@@ -53,12 +56,6 @@ class CommentSection extends React.Component {
 
 
   updateHandler = event => {
- /*   console.log(
-      '##### target name & value in updated handler',
-      event.target.name,
-      event.target.value
-    );
- */
     // use controlled component to manage events
     this.setState({[event.target.name]: event.target.value} );
 
@@ -80,7 +77,8 @@ class CommentSection extends React.Component {
   addNewComment = (event) =>  {
     console.log('++++   addNewComment state ', event);
     let newCommentItem = {
-      username: " webDude",
+      // username: " webDude",
+      username: this.state.user,
       text: this.state.newComment,
       id: Date.now(),
       selected: false,
@@ -117,9 +115,6 @@ class CommentSection extends React.Component {
   // this.state.comments.filter(comment => comment.username.includes(this.state.searchTerm))
 
   render() {
-
-   console.log('render shows commments >>>>>> ', this.state.comments );
-
     return(
       <div className = "commentsSection-container">
 

@@ -5,8 +5,8 @@ class Login extends React.Component {
   constructor(props) {
     super();
     this.state = {
-      userName: '',
-      passWord: '',
+      username: '',
+      password: '',
       attempts: 0,   // just for fun later
 
 
@@ -31,11 +31,11 @@ class Login extends React.Component {
 
 
   loginHandleSubmitHandler  = e => {
-    const userName = this.state.userName;
+    const username = this.state.username;
     // e.preventDefault();
 
-    console.log("userName LOGGED!!!! ");
-    localStorage.setItem("userName", userName);
+    console.log("username LOGGED!!!! ");
+    localStorage.setItem("username", username);
     window.location.reload();
 };
 
@@ -51,8 +51,8 @@ class Login extends React.Component {
           <input
             type = "text"
             placeholder = "enter username"
-            name = "userName"
-            value = {this.state.userName}
+            name = "username"
+            value = {this.state.username}
             onChange = {this.loginInputHandler}
 
           />
@@ -60,8 +60,8 @@ class Login extends React.Component {
         <input
           type = "password"
           placeholder = "enter password"
-          name = "passWord"
-          value = {this.state.passWord}
+          name = "password"
+          value = {this.state.password}
           onChange = {this.loginInputHandler}
 
         />
