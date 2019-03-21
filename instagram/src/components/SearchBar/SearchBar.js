@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import vertical_LINE from '../img/vertical_LINE_2.jpg';
 import compass from '../img/compass.png';
 import heart from '../img/heart-icon.png';
-import person from '../img/person.png';
+import person from '../img/person_2.png';
 
 import {
   Header,

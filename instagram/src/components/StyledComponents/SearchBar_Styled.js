@@ -52,9 +52,15 @@ const IMG = styled.img`
   : null
   }
   
+  ${props => props.alt === "heart"
+    ? `{background: dodgerblue;}`
+    : null
+  }
   
-  
-  
+  ${props => props.alt === "person"
+    ? `{background: salmon;}`
+    : null
+}
   
   
 `;
