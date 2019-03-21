@@ -34,7 +34,17 @@ const LogoImage = styled.img.attrs({src: logoIMG, alt: 'logo'})`
 const IMG = styled.img`
   width: 30px;
   height: 30px;
-  background: pink
+  background: pink;
+  
+  ${props => props.type === "compass" 
+  // ? `backgroundColor: "green";`  nope
+  // ? `backgroundColor: "green";`    nope
+  // ? `background: "green";`         nope 
+  // ? `background: "green";`         nope
+//  ? `background: #4caf50;`   // works !!!
+  ? `{background: green;}`    // works !!!
+    : null
+  }
 `;
 
 const SearchInput = styled.input`
@@ -66,6 +76,7 @@ const SearchBar = (props) => {
 
       <Content>
         <IMG src = {compass} alt = "compass"/>
+        <IMG type = "compass" src = {compass} alt = "compass"/>
         <IMG src = {heart} alt = "heart"/>
         <IMG src = {person} alt = "person"/>
       </Content>
