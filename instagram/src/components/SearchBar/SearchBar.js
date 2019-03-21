@@ -36,12 +36,12 @@ const IMG = styled.img`
   height: 30px;
   background: pink;
   
-  ${props => props.type === "compass" 
+  ${props => props.alt === "compass" 
   // ? `backgroundColor: "green";`    nope
   // ? `backgroundColor: "green";`    nope
   // ? `background: "green";`         nope 
   // ? `background: "green";`         nope
-//  ? `background: #4caf50;`   // works !!!
+//  ? `background: #4caf50;`  // works !!!
   ? `{background: green;}`    // works !!!
     : null
   }
@@ -76,7 +76,7 @@ const SearchBar = (props) => {
 
       <Content>
         <IMG src = {compass} alt = "compass"/>
-        <IMG type = "compass" src = {compass} alt = "compass"/>
+        <IMG alt = "compass" src = {compass} alt = "compass"/>
         <IMG src = {heart} alt = "heart"/>
         <IMG src = {person} alt = "person"/>
       </Content>
