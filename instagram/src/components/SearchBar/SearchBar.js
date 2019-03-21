@@ -28,7 +28,7 @@ const Content = styled.div`
 const LogoImage = styled.img.attrs({src: logoIMG, alt: 'logo'})`
   width: 30px;
   height: 30px;
-  background: white;
+  background: orange;
 `;
 
 const IMG = styled.img`
@@ -37,7 +37,7 @@ const IMG = styled.img`
   background: pink;
   
   ${props => props.type === "compass" 
-  // ? `backgroundColor: "green";`  nope
+  // ? `backgroundColor: "green";`    nope
   // ? `backgroundColor: "green";`    nope
   // ? `background: "green";`         nope 
   // ? `background: "green";`         nope
