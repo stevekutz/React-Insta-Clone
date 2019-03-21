@@ -29,7 +29,7 @@ class CommentsHeaderCLASS extends React.Component {
 
 
   render() {
-    
+
     return(
       <div className = "commentsHeader-container">
         <div className = "commentsHeaderIMG">

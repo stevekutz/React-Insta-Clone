@@ -1,6 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import SearchBar_Styled from './SearchBar_Styled';
+
+import vertical_LINE from '../img/vertical_LINE_2.jpg';
+import compass from '../img/compass.png';
+import heart from '../img/heart-icon.png';
+import person from '../img/person.png';
+
+import {
+  Header,
+  Content,
+  LogoImage,
+  IMG,
+  SearchInput
+} from '../StyledComponents/SearchBar_Styled' ;
+
+/*
 
 //import './searchbar.css';
 import logoIMG from '../img/instagram_LOGO.png';
@@ -57,7 +71,7 @@ const SearchInput = styled.input`
   outline-style: none;
 `;
 
-
+*/
 
 
 const SearchBar = (props) => {

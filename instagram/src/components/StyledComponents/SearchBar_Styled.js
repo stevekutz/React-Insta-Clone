@@ -1,4 +1,3 @@
-import './searchbar.css';
 import logoIMG from '../img/instagram_LOGO.png';
 import vertical_LINE from '../img/vertical_LINE_2.jpg';
 import compass from '../img/compass.png';
