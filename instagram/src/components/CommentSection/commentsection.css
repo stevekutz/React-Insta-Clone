@@ -23,6 +23,13 @@
 }
 
 
+.commentsImg {
+  width: 30px;
+  height: 30px;
+  background: white;
+
+}
+
 .commentsHeaderLikes {
   width: 100%;
   display: flex;

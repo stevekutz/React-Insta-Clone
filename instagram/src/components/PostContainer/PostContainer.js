@@ -3,6 +3,7 @@ import PostContainerHeader from './PostContainerHeader';
 import CommentSection from '../../components/CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import './postcontainer.css';
+import styled from "styled-components";
 
 const PostContainer = (props) => {
 

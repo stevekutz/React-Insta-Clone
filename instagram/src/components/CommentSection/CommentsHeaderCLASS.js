@@ -29,17 +29,20 @@ class CommentsHeaderCLASS extends React.Component {
 
 
   render() {
-
-
+    
     return(
       <div className = "commentsHeader-container">
         <div className = "commentsHeaderIMG">
           <img
+            className = "commentsImg"
             src = {heart}
             alt = "heartIMG"
             onClick = { this.props.likeIncrementHandler }
           />
-          <img src = {chat} alt = "Bubble_chat"/>
+          <img
+            className = "commentsImg"
+            src = {chat}
+            alt = "Bubble_chat"/>
         </div>
         <h3 className = "commentsHeaderLikes"> {this.state.likes} {this.props.likesVar} </h3>
       </div>
