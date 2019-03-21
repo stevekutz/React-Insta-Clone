@@ -1,8 +1,8 @@
+//import vertical_LINE from '../img/vertical_LINE_2.jpg';
+//import heart from '../img/heart-icon.png';
+//import person from '../img/person.png';
 import logoIMG from '../img/instagram_LOGO.png';
-import vertical_LINE from '../img/vertical_LINE_2.jpg';
 import compass from '../img/compass.png';
-import heart from '../img/heart-icon.png';
-import person from '../img/person.png';
 import styled from "styled-components";
 
 

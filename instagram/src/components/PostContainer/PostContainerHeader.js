@@ -2,29 +2,38 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './postcontainer.css';
 
+import {
+  PostContainer_div,
+  PostContainerHeader_div,
+  HeaderIMG,
+  UserName,
+  PostImage,
+  BodyImage
+
+} from '../StyledComponents/PostContainer_Styled';
+
 const PostContainerHeader = (props) => {
 
   return (
 
-    <div className = "postcontainer"  key = {props.user_name}>
-      <div
+    <PostContainer_div
+         key = {props.user_name}>
+      <PostContainerHeader_div
         key = {props.user_name}
-        className = "postcontainer-header">
-        <img
-          className = "headerIMG"
+      >
+        <HeaderIMG
           src = {props.thumbnail_URL}
           alt = "imageURL"/>
-        <h3 className = "userName"> {props.user_name}</h3>
-      </div>
+        <UserName> {props.user_name}</UserName>
+      </PostContainerHeader_div>
 
-      <div className = "postImage">
-        <img
-          className = "bodyIMG"
+      <PostImage>
+        <BodyImage
           src = {props.image_URL}
           alt = "imageURL"
         />
-      </div>
-    </div>
+      </PostImage>
+    </PostContainer_div>
 
   )
 };
