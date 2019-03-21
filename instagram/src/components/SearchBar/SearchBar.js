@@ -16,7 +16,7 @@ const Header = styled.div`
   align-items: center;
 `;
 
-const LeftContent = styled.div`
+const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,41 +31,44 @@ const LogoImage = styled.img.attrs({src: logoIMG, alt: 'logo'})`
   background: white;
 `;
 
-
 const IMG = styled.img`
   width: 30px;
   height: 30px;
   background: pink
+`;
 
+const SearchInput = styled.input`
+  width: 20%;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  font-style: italic;
+  outline-style: none;
 `;
 
 const SearchBar = (props) => {
 
   return (
     <Header>
-      <LeftContent>
+      <Content>
         <LogoImage/>
         <IMG src = {vertical_LINE} alt = "v_line"/>
         <h1 className = 'logo'> Instagram </h1>
-      </LeftContent>
+      </Content>
 
 
-      <input
+      <SearchInput
         type = "text"
         name = "searchTerm"
         value = {props.value}
         placeholder= " search here..."
-        className = "searchInput"
         onChange = {props.updateHandler}
       />
 
-      <div className= "right-content">
-
+      <Content>
         <IMG src = {compass} alt = "compass"/>
-        <img src = {compass} alt = "compass"/>
-        <img src = {heart} alt = "heart"/>
-        <img src = {person} alt = "person" />
-      </div>
+        <IMG src = {heart} alt = "heart"/>
+        <IMG src = {person} alt = "person"/>
+      </Content>
 
 
     </Header>
