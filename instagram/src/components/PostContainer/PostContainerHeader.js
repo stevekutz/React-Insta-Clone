@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './postcontainer.css';
+// import './postcontainer.css';
 
 import {
   PostContainer_div,

@@ -4,7 +4,14 @@ import PropTypes from 'prop-types';
 import CommentsHeaderCLASS from './CommentsHeaderCLASS';
 import Comment from './Comment';
 import moment from 'moment';
-import "./commentsection.css";
+// import "./commentsection.css";
+
+import {
+  CommentSectionContainer,
+  NewCommentForm,
+  AddComment,
+} from '../StyledComponents/CommentSection_Styled' ;
+
 
 
 class CommentSection extends React.Component {
@@ -98,7 +105,7 @@ class CommentSection extends React.Component {
 
   render() {
     return(
-      <div className = "commentsSection-container">
+      <CommentSectionContainer>
 
         <CommentsHeader
           likes = {this.state.likes}
@@ -130,13 +137,11 @@ class CommentSection extends React.Component {
           (<h2> loading comments </h2>)
         }
 
-        <form
-          className = "newCommentForm"
+        <NewCommentForm
           onSubmit = {this.handleSubmit}
         >
 
-            <input
-              className = "addComment"
+            <AddComment
               placeholder = "Add a Comment"
               type = "text"
               name = 'newComment'
@@ -144,9 +149,9 @@ class CommentSection extends React.Component {
               onChange = {this.updateHandler}
             />
 
-        </form>
+        </NewCommentForm>
 
-      </div>
+      </CommentSectionContainer>
 
     )
   }

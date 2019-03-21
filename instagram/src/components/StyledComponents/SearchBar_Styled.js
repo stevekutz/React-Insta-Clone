@@ -51,6 +51,12 @@ const IMG = styled.img`
   ? `{background: green;}`    // works !!!
   : null
   }
+  
+  
+  
+  
+  
+  
 `;
 
 const SearchInput = styled.input`

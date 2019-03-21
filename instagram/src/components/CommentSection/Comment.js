@@ -1,21 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './commentsection.css';
+// import './commentsection.css';
 
+import {
+  CommentContainer,
+  Comment_h3,
+  Comment_UserName,
+  CommentDate
+} from '../StyledComponents/CommentSection_Styled';
 
 const Comment = (props) => {
 
   return(
-    <div
-      className = "comment-container"
+    <CommentContainer
       onClick = {() => props.selectedHandler(props.comment)}
     >
 
-      <h3 className = "comment">
-        <span className = "userName">{props.comment.username} </span>
-              {props.comment.text}</h3>
-      <h5 className = "commentDate" >  {props.comment.timeVal}</h5>
-    </div>
+      <Comment_h3>
+        <Comment_UserName>{props.comment.username} </Comment_UserName>
+        {props.comment.text}</Comment_h3>
+      <CommentDate >  {props.comment.timeVal}</CommentDate>
+    </CommentContainer>
 
   )
 

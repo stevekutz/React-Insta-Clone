@@ -2,6 +2,12 @@ import React from 'react';
 import heart from '../img/heart-icon.png';
 import chat from '../img/Bubble_chat.png';
 
+import {
+  CommentHeaderContainer,
+  CommentHeaderImage,
+  CommentImage,
+  CommentHeaderLikes
+} from '../StyledComponents/CommentSection_Styled';
 
 
 import './commentsection.css';
@@ -31,21 +37,19 @@ class CommentsHeaderCLASS extends React.Component {
   render() {
 
     return(
-      <div className = "commentsHeader-container">
-        <div className = "commentsHeaderIMG">
-          <img
-            className = "commentsImg"
+      <CommentHeaderContainer>
+        <CommentHeaderImage>
+          <CommentImage
             src = {heart}
             alt = "heartIMG"
             onClick = { this.props.likeIncrementHandler }
           />
-          <img
-            className = "commentsImg"
+          <CommentImage
             src = {chat}
             alt = "Bubble_chat"/>
-        </div>
-        <h3 className = "commentsHeaderLikes"> {this.state.likes} {this.props.likesVar} </h3>
-      </div>
+        </CommentHeaderImage>
+        <CommentHeaderLikes> {this.state.likes} {this.props.likesVar} </CommentHeaderLikes>
+      </CommentHeaderContainer>
     )
 
   }

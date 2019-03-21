@@ -2,26 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import heart from '../img/heart-icon.png';
 import chat from '../img/Bubble_chat.png';
-import './commentsection.css';
+
+import {
+  CommentHeaderContainer,
+  CommentHeaderImage,
+  CommentImage,
+  CommentHeaderLikes
+} from '../StyledComponents/CommentSection_Styled';
+
 
 const CommentsHeader = (props) => {
 
   return(
-    <div className = "commentsHeader-container">
-      <div className = "commentsHeaderIMG">
-        <img
-          className = "commentsImg"
+    <CommentHeaderContainer>
+      <CommentHeaderImage>
+        <CommentImage
           src = {heart}
           alt = "heartIMG"
           onClick = { props.likeIncrementHandler }
         />
-        <img
-          className = "commentsImg"
+        <CommentImage
           src = {chat}
           alt = "Bubble_chat"/>
-      </div>
-      <h3 className = "commentsHeaderLikes"> {props.likes} {props.likesVar} </h3>
-    </div>
+      </CommentHeaderImage>
+      <CommentHeaderLikes> {props.likes} {props.likesVar} </CommentHeaderLikes>
+    </CommentHeaderContainer>
   )
 
 };
