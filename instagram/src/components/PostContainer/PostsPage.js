@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
 import {dummyData} from '../../dummy-data';
+
+
 import '../../App.css';
 
 class PostsPage extends React.Component {

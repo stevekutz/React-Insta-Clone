@@ -10,6 +10,7 @@ import {
   Header,
   Content,
   LogoImage,
+  Logo,
   IMG,
   SearchInput
 } from '../StyledComponents/SearchBar_Styled' ;
@@ -81,7 +82,7 @@ const SearchBar = (props) => {
       <Content>
         <LogoImage/>
         <IMG src = {vertical_LINE} alt = "v_line"/>
-        <h1 className = 'logo'> Instagram </h1>
+        <Logo> Instagram </Logo>
       </Content>
 
 

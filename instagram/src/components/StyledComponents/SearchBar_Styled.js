@@ -18,7 +18,7 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 35%;
-  margin: .5rem 2rem;
+  margin: .5rem 0;
   padding: .25rem;
 `;
 
@@ -26,6 +26,15 @@ const LogoImage = styled.img.attrs({src: logoIMG, alt: 'logo'})`
   width: 30px;
   height: 30px;
   background: orange;
+`;
+
+
+const Logo = styled.h1`
+  font-family: Lobster;
+  display: flex;
+  align-items: baseline;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
 `;
 
 const IMG = styled.img`
@@ -52,4 +61,4 @@ const SearchInput = styled.input`
   outline-style: none;
 `;
 
-export { Header, Content, LogoImage, IMG, SearchInput};
+export { Header, Content, LogoImage, IMG, SearchInput, Logo};
