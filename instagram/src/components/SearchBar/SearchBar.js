@@ -16,7 +16,6 @@ import {
 } from '../StyledComponents/SearchBar_Styled' ;
 
 const SearchBar = (props) => {
-
   return (
     <Header>
       <Content>
@@ -44,5 +43,13 @@ const SearchBar = (props) => {
   )
 
 };
+
+SearchBar.propTypes = {
+  name: PropTypes.string,
+  value: PropTypes.string
+
+
+};
+
 
 export default SearchBar;

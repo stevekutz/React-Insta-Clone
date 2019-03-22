@@ -1,8 +1,5 @@
 import React from 'react';
 import Login from '../Login/Login';
-import PropTypes from 'prop-types';
-import './authentication.css';
-
 
 const withAuthenticate = App =>
   class extends React.Component {

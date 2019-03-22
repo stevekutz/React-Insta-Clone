@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import {
   CommentContainer,
-  Comment_h3,
-  Comment_UserName,
+  CommentH3,
+  CommentUserName,
   CommentDate
 } from '../StyledComponents/CommentSection_Styled';
 
@@ -16,13 +16,23 @@ const Comment = (props) => {
       onClick = {() => props.selectedHandler(props.comment)}
     >
 
-      <Comment_h3>
-        <Comment_UserName>{props.comment.username} </Comment_UserName>
-        {props.comment.text}</Comment_h3>
+      <CommentH3>
+        <CommentUserName>{props.comment.username} </CommentUserName>
+        {props.comment.text}</CommentH3>
       <CommentDate >  {props.comment.timeVal}</CommentDate>
     </CommentContainer>
 
   )
+
+};
+
+Comment.propTypes = {
+  comment: PropTypes.shape({
+    text: PropTypes.string,
+    username: PropTypes.string
+    }
+  )
+
 
 };
 

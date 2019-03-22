@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 
 import styled from 'styled-components';
-
 import PostsPage from './components/PostContainer/PostsPage';
 import Authenticate from './components/Authentication/Authenticate';
+// import './App.css';
 
-const Main_App = styled.div`
+const MainApp = styled.div`
 * {
   box-sizing: border-box;
 }
@@ -39,9 +39,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="main-app">
+      <MainApp>
           <PostsPage />
-      </div>
+      </MainApp>
     )
   }
 }

@@ -2,7 +2,7 @@
 //import heart from '../img/heart-icon.png';
 //import person from '../img/person.png';
 import logoIMG from '../img/instagram_LOGO.png';
-import compass from '../img/compass.png';
+// import compass from '../img/compass.png';
 import styled from "styled-components";
 
 

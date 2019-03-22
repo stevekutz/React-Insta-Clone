@@ -14,7 +14,7 @@ import './commentsection.css';
 
 class CommentsHeaderCLASS extends React.Component {
   constructor(props) {
-    console.log('!!!! CommentsHeaderCLASS props  ', props);
+    // console.log('!!!! CommentsHeaderCLASS props  ', props);
     super(props);
     this.state = {
       likes: 0,
@@ -24,7 +24,7 @@ class CommentsHeaderCLASS extends React.Component {
 
 
  componentDidMount() {
-    console.log('@@@@@  CommentsHeaderCLASS CDM ');
+ //    console.log('@@@@@  CommentsHeaderCLASS CDM ');
 
     this.setState({
       likes: this.props.likes

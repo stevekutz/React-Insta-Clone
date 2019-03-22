@@ -63,14 +63,14 @@ const CommentImage = styled.img`
    cursor: pointer;
  `;
 
- const Comment_h3 = styled.h3`
+ const CommentH3 = styled.h3`
    font-size: 1.25rem;
    line-height: 1.5rem;
    padding: 0 .5rem;
    vertical-align: baseline;
  `;
 
- const Comment_UserName = styled.span`
+ const CommentUserName = styled.span`
    font-size: 1.25rem;
    line-height: 1.5rem;
    font-weight: bold;
@@ -97,7 +97,7 @@ export {
   CommentImage,
   CommentHeaderLikes,
   CommentContainer,
-  Comment_h3,
-  Comment_UserName,
+  CommentH3,
+  CommentUserName,
   CommentDate
 };

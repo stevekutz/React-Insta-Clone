@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 // import './postcontainer.css';
 
 import {
-  PostContainer_div,
-  PostContainerHeader_div,
+  PostContainerDiv,
+  PostContainerHeaderDiv,
   HeaderIMG,
   UserName,
   PostImage,
@@ -13,19 +13,18 @@ import {
 } from '../StyledComponents/PostContainer_Styled';
 
 const PostContainerHeader = (props) => {
-
   return (
 
-    <PostContainer_div
+    <PostContainerDiv
          key = {props.user_name}>
-      <PostContainerHeader_div
+      <PostContainerHeaderDiv
         key = {props.user_name}
       >
         <HeaderIMG
           src = {props.thumbnail_URL}
           alt = "imageURL"/>
         <UserName> {props.user_name}</UserName>
-      </PostContainerHeader_div>
+      </PostContainerHeaderDiv>
 
       <PostImage>
         <BodyImage
@@ -33,13 +32,15 @@ const PostContainerHeader = (props) => {
           alt = "imageURL"
         />
       </PostImage>
-    </PostContainer_div>
+    </PostContainerDiv>
 
   )
 };
 
 PostContainerHeader.propTypes = {
-  likes: PropTypes.number
+  user_name: PropTypes.string.isRequired,
+  thumbnailUrl: PropTypes.string,
+  imageUrl: PropTypes.string
 };
 
 export default PostContainerHeader;

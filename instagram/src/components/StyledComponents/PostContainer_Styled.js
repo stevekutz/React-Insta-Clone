@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PostContainer_div = styled.div`
+const PostContainerDiv = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@ const PostContainer_div = styled.div`
 
 `;
 
-const PostContainerHeader_div = styled.div`
+const PostContainerHeaderDiv = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -43,8 +43,8 @@ const BodyImage = styled.img`
 `;
 
 
-export {PostContainer_div,
-  PostContainerHeader_div,
+export {PostContainerDiv,
+  PostContainerHeaderDiv,
   HeaderIMG,
   UserName,
   PostImage,

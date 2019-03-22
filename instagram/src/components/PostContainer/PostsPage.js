@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
 import {dummyData} from '../../dummy-data';
@@ -8,7 +7,7 @@ import {dummyData} from '../../dummy-data';
 
 import '../../App.css';
 
-class PostsPage extends React.Component {
+class PostsPage extends Component {
   constructor() {
     super();
     this.state = {

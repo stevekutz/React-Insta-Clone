@@ -12,7 +12,6 @@ import {
 
 
 const CommentsHeader = (props) => {
-
   return(
     <CommentHeaderContainer>
       <CommentHeaderImage>
@@ -31,5 +30,10 @@ const CommentsHeader = (props) => {
 
 };
 
+
+CommentsHeader.propTypes = {
+  likes: PropTypes.number.isRequired,
+  likesVar: PropTypes.string
+};
 
 export default CommentsHeader;

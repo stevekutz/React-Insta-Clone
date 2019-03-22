@@ -4,7 +4,6 @@ import CommentSection from '../../components/CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 
 const PostContainer = (props) => {
-
   return (
     <div>
 
@@ -49,7 +48,22 @@ const PostContainer = (props) => {
 
 // build this into shape!!!
 PostContainer.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object)
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      timestamp: PropTypes.string.isRequired,
+      thumbnailUrl: PropTypes.string,
+      imageUrl: PropTypes.string,
+      likes: PropTypes.number,
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({
+          username: PropTypes.string.isRequired,
+          text: PropTypes.string.isRequired
+        })
+      )
+    })
+
+  )
 
 };
 

@@ -16,7 +16,6 @@ import {
 
 class CommentSection extends React.Component {
   constructor(props) {
-    console.log('CommentSection props', props);
     super(props);
     this.state = {
       comments: [],
@@ -127,7 +126,6 @@ class CommentSection extends React.Component {
               (
               <Comment
                 comment = {comment}
-                commentSelected = {false}
                 key = {i}
                 selectedHandler = {this.selectedHandler}
               />
