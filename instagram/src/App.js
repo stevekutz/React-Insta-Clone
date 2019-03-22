@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import PropTypes from 'prop-types';
 import './App.css';
 
 import styled from 'styled-components';

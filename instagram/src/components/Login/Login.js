@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './login.css';
 
 class Login extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       username: '',
@@ -20,11 +19,11 @@ class Login extends React.Component {
   };
 
   loginHandleSubmitHandler  = e => {
-     e.preventDefault();   // no effect?
+     //e.preventDefault();   // no effect?
 
     console.log("username LOGGED!!!! ");
     localStorage.setItem("username", this.state.username);
-    window.location.reload();
+    window.location.reload();  // we reload anyways from submit?
 };
 
   render() {
