@@ -17,7 +17,7 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 35%;
+  width: 25%;
   margin: .5rem 0;
   padding: .25rem;
 `;
@@ -66,11 +66,12 @@ const IMG = styled.img`
 `;
 
 const SearchInput = styled.input`
-  width: 20%;
+  width: 30%;
   line-height: 1.25rem;
   font-size: 1rem;
   font-style: italic;
   outline-style: none;
+  border-radius: 5px;
 `;
 
 export { Header, Content, LogoImage, IMG, SearchInput, Logo};
