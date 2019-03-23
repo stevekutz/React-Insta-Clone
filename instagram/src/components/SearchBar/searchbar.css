@@ -1,0 +1,42 @@
+.searchbar-container{;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.left-content, .right-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  margin: .5rem 2rem;
+  padding: .25rem;
+}
+
+.searchInput{
+  width: 20%;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  font-style: italic;
+
+  outline-style: none;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  background: white;
+
+}
+
+
+
+.logo {
+  font-family: Lobster;
+  display: flex;
+  align-items: baseline;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+}

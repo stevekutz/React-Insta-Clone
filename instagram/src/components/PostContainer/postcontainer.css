@@ -1,0 +1,58 @@
+.postcontainerALL {
+  width: 100%;
+}
+
+
+.postcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.postcontainer-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+
+
+}
+
+.headerIMG {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  padding: 1rem;
+
+}
+
+.userName {
+  padding: 1rem;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+
+
+}
+
+
+
+.postImage {
+  width: 100%;
+
+
+}
+
+.bodyIMG {
+  width: 100%;
+  height: 100%;
+
+
+}

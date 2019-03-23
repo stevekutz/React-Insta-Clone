@@ -1,0 +1,97 @@
+.commentsSection-container{;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+
+.commentsHeader-container{
+  width: 40%;
+  padding: .5rem;
+
+}
+
+.commentsHeaderIMG{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: .25rem;
+  cursor: pointer;
+
+}
+
+
+.commentsImg {
+  width: 30px;
+  height: 30px;
+  background: white;
+
+}
+
+.commentsHeaderLikes {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+
+}
+
+.comment-container {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-size: .25rem;
+  cursor: pointer;
+  /* margin: .25rem 1rem; */
+}
+
+.userName{
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.comment {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding: 0 .5rem;
+  vertical-align: baseline;
+
+}
+
+
+.newCommentForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+
+}
+
+.addComment {
+  width: 90%;
+  margin: 0 auto;
+  outline-style: none;
+  font-size: 1rem;
+  border-radius: .5rem;
+}
+
+.inputSubmit {
+  display: flex;
+  margin: 0 auto;
+
+}
+
+.commentDate {
+  text-align: right;
+  padding: 0 .5rem;
+  font-family: Benchnine;
+
+}
